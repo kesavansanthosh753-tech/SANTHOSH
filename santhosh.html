@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Builder App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+
+    <form id="resumeForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" required />
+
+      <label for="skills">Skills (comma separated)</label>
+      <input type="text" id="skills" required />
+
+      <label for="experience">Experience</label>
+      <textarea id="experience" rows="4" required></textarea>
+
+      <label for="education">Education</label>
+      <textarea id="education" rows="4" required></textarea>
+
+      <button type="submit">Build Resume</button>
+    </form>
+
+    <section id="resumePreview" class="hidden">
+      <h2>Resume Preview</h2>
+      <div class="resume-section">
+        <h3 id="previewName"></h3>
+        <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+      </div>
+      <div class="resume-section">
+        <h3>Skills</h3>
+        <ul id="previewSkills"></ul>
+      </div>
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <p id="previewExperience"></p>
+      </div>
+      <div class="resume-section">
+        <h3>Education</h3>
+        <p id="previewEducation"></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
